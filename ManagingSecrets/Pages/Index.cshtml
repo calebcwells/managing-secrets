@@ -1,0 +1,13 @@
+﻿@page
+
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Configuration.GetSection("ApplicationConfiguration")["Name"]</h1>
+</div>
